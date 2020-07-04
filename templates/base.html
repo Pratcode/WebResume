@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MySite</title>
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+</head>
+<body>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+        <a href="#" class="navbar-brand text-capitalize">{{ name }}</a>
+        <a href="{% url 'home' %}" class="nav-link text-light">Home</a>
+        <a href="{% url 'resume' %}" class="nav-link text-light">Resume</a>
+        <a href="{% url 'contact' %}" class="nav-link text-light">Contact</a>
+    </nav>
+    {% block content %}
+    {% endblock %}
+</body>
+</html>

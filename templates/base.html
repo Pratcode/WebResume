@@ -9,14 +9,14 @@
 </head>
 <body>
     <script src="{% static 'js/bootstrap.min.js' %}"></script>
-    <nav class="navbar navbar-light navbar-expand-md">
-        <div class="container-fluid"><a class="navbar-brand" href="#">Brand</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+    <nav class="navbar navbar-dark bg-dark navbar-expand-md">
+        <div class="container-fluid"><a class="navbar-brand" href="#">{{ name }}</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse"
                 id="navcol-1">
                 <ul class="nav navbar-nav">
-                    <li class="nav-item" role="presentation"><a class="nav-link active" href="#">First Item</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="#">Second Item</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="#">Third Item</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link active" href="{% url 'home' %}">Home</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="{% url 'resume' %}">Resume</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="{% url 'contact' %}">Contect</a></li>
                 </ul>
             </div>
         </div>
@@ -32,5 +32,10 @@
 {#    </nav>#}
     {% block content %}
     {% endblock %}
+    <div class="card-footer">
+        <footer>
+            <p class="copyright" >Company Name © 2017</p>
+        </footer>
+    </div>
 </body>
 </html>

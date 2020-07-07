@@ -11,7 +11,9 @@
 <body>
     <script src="{% static 'js/bootstrap.min.js' %}"></script>
     <nav class="navbar navbar-dark bg-dark navbar-expand-md">
-        <div class="container-fluid"><a class="navbar-brand" href="#">{{ name }}</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+    {% for media in media_suff %}
+        <div class="container-fluid"><a class="navbar-brand" href="#">{{ media.media_name }}</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+    {% endfor %}
             <div class="collapse navbar-collapse"
                 id="navcol-1">
                 <ul class="nav navbar-nav">

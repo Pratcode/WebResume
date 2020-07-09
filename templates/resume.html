@@ -1,5 +1,8 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-         <embed src="{% static 'resume.pdf' %}" width="100%" height="1000px" />
+     {% for media in media_stuff %}
+         <embed src="static{{ media.media_file.url }}" width="100%" height="1000px" />
+     {% endfor %}
 {% endblock %}
+

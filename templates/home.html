@@ -9,7 +9,7 @@
             <h6>hi there , this is {{ media.media_name }}</h6>
             <h1>{{ media.media_pro }}</h1>
             <h6>{{ media.media_body }}</h6>
-            <img src="{% static 'image.jpg' %}" style="float: right; margin: 10px" width=300px; height=300px>
+            <img src="static{{ media.media_img.url }}" style="float: right; margin: 10px" width=300px; height=300px>
         </div>
     </div>
     {% endfor %}

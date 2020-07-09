@@ -52,7 +52,7 @@
             <button type="button" onclick='window.location = "{{ media.Github }}"' style="background-color: #333 !important; color: white; margin: 5px" class="btn"><i class="fa fa-github "></i> Github</button>{% endif %}
             <!--Email-->
             {% if media.Email %}
-            <button type="button" onclick='window.location = "{{ media.Email }}"' style="background-color: #4b515d !important; color: white; margin: 5px" class="btn"><i class="fa fa-envelope "></i> Email</button>{% endif %}
+            <button type="button" onclick='window.location = "mailto:{{ media.Email }}"' style="background-color: #4b515d !important; color: white; margin: 5px" class="btn"><i class="fa fa-envelope "></i> Email</button>{% endif %}
             <!--Reddit-->
             {% if media.Reddit %}
             <button type="button" onclick='window.location = "{{ media.Reddit }}"' style="background-color: #ff4500 !important; color: white; margin: 5px" class="btn"><i class="fa fa-reddit-alien "></i> Reddit</button>{% endif %}

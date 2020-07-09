@@ -1,4 +1,5 @@
 {% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,13 +10,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
+    <script src="{% static 'js/jquery.min.js' %}"></script>
     <script src="{% static 'js/bootstrap.min.js' %}"></script>
     <nav class="navbar navbar-dark bg-dark navbar-expand-md">
-    {% for media in media_suff %}
-        <div class="container-fluid"><a class="navbar-brand" href="#">{{ media.media_name }}</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
-    {% endfor %}
-            <div class="collapse navbar-collapse"
-                id="navcol-1">
+        <div class="container-fluid"><a class="navbar-brand" href="#">{% for media in media_suff %}{{ media.media_name }}{% endfor %}</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navcol-1">
                 <ul class="nav navbar-nav">
                     <li class="nav-item" role="presentation"><a class="nav-link active" href="{% url 'home' %}">Home</a></li>
                     <li class="nav-item" role="presentation"><a class="nav-link" href="{% url 'resume' %}">Resume</a></li>
@@ -24,20 +23,11 @@
             </div>
         </div>
     </nav>
-    <script src="{% static 'js/jquery.min.js' %}"></script>
-    <script src="{% static 'js/bootstrap.min.js' %}"></script>
-
-{#    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">#}
-{#        <a href="#" class="navbar-brand text-capitalize">{{ name }}</a>#}
-{#        <a href="{% url 'home' %}" class="nav-link text-light">Home</a>#}
-{#        <a href="{% url 'resume' %}" class="nav-link text-light">Resume</a>#}
-{#        <a href="{% url 'contact' %}" class="nav-link text-light">Contact</a>#}
-{#    </nav>#}
     {% block content %}
     {% endblock %}
     <div class="card-footer text-light bg-dark" >
         <footer>
-            <p class="copyright " >Company Name © 2020</p>
+            <p class="copyright " >{% for media in media_suff %}{{ media.media_name }}{% endfor %} © <script>document.write(new Date().getFullYear())</script></p>
         </footer>
     </div>
 </body>

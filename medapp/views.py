@@ -1,5 +1,7 @@
 from django.shortcuts import render, redirect
 from .models import Media, Contact
+
+
 # Create your views here.
 
 

@@ -1,10 +1,62 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block content %}
     <br><br>
-    <div class="container jumbotron">
-        <h1>Contact Me</h1><br><br>
-        <h6>facbook</h6>
-        <h6>twitter</h6>
-        <h6>instagram</h6>
+    <div class="container" style="width: 80%">
+        <div class="jumbotron">
+            <div class="contact-clean" style="margin: 10%">
+                <form action="{% url 'msg' %}" method="post">
+                     {% csrf_token %}
+                    <h2 class="text-center">Contact Me</h2><br><br>
+                    <div class="form-group"><input class="form-control" type="text" name="name" placeholder="Name"></div>
+                    <div class="form-group"><input class="form-control is-invalid" type="email" name="email" placeholder="Email"><small class="form-text text-danger" >Please enter a correct email address.</small></div>
+                    <div class="form-group"><textarea class="form-control" name="message" placeholder="Message" rows="14" ></textarea></div>
+                    <div class="form-group"><button class="btn btn-primary" type="submit">send </button></div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="container" style="width: 80%">
+        {% for media in media_stuff %}
+        <div class="jumbotron">
+            <h1>Folllow Me -</h1><br><br>
+            <!--Facebook-->
+            {% if media.facebook %}
+            <button type="button " onclick='window.location = "{{ media.facebook }}"' style="background-color: #3b5998 !important; color: white; margin: 5px" class="btn btn"><i class="fa fa-facebook-f "></i> Facebook</button>{% endif %}
+            <!--Twitter-->
+            {% if media.Twitter %}
+            <button type="button" onclick='window.location = "{{ media.Twitter }}"' style="background-color: #55acee !important; color: white; margin: 5px" class="btn"><i class="fa fa-twitter "></i> Twitter</button>{% endif %}
+            <!--Google +-->
+            {% if media.Google %}
+            <button type="button" onclick='window.location = "{{ media.Google }}"' style="background-color: #dd4b39 !important; color: white; margin: 5px" class="btn"><i class="fa fa-google-plus-g "></i> Google +</button>{% endif %}
+            <!--Linkedin-->
+            {% if media.Linkedin %}
+            <button type="button" onclick='window.location = "{{ media.Linkedin }}"' style="background-color: #0082ca !important; color: white; margin: 5px" class="btn"><i class="fa fa-linkedin-in "></i> Linkedin</button>{% endif %}
+            <!--Instagram-->
+            {% if media.Instagram %}
+            <button type="button" onclick='window.location = "{{ media.Instagram }}"' style="background-color: #2e5e86 !important; color: white; margin: 5px" class="btn"><i class="fa fa-instagram "></i> Instagram</button>{% endif %}
+            <!--Pinterest-->
+            {% if media.Pinterest %}
+            <button type="button" onclick='window.location = "{{ media.Pinterest }}"' style="background-color: #c61118 !important; color: white; margin: 5px" class="btn"><i class="fa fa-pinterest "></i> Pinterest</button>{% endif %}
+            <!--Stack Overflow-->
+            {% if media.Stack_Overflow %}
+            <button type="button" onclick='window.location = "{{ media.Stack_Overflow }}"' style="background-color: #ffac44 !important; color: white; margin: 5px" class="btn"><i class="fa fa-stack-overflow "></i> Stack Overflow</button>{% endif %}
+            <!--Youtube-->
+            {% if media.Youtube %}
+            <button type="button" onclick='window.location = "{{ media.Youtube  }}"' style="background-color: #ed302f !important; color: white; margin: 5px" class="btn"><i class="fa fa-youtube "></i> Youtube</button>{% endif %}
+            <!--Slack-->
+            {% if media.Slack %}
+            <button type="button" onclick='window.location = "{{ media.Slack }}"' style="background-color: #56b68b !important; color: white; margin: 5px" class="btn"><i class="fa fa-slack-hash "></i> Slack</button>{% endif %}
+            <!--Github-->
+            {% if media.Github %}
+            <button type="button" onclick='window.location = "{{ media.Github }}"' style="background-color: #333 !important; color: white; margin: 5px" class="btn"><i class="fa fa-github "></i> Github</button>{% endif %}
+            <!--Email-->
+            {% if media.Email %}
+            <button type="button" onclick='window.location = "{{ media.Email }}"' style="background-color: #4b515d !important; color: white; margin: 5px" class="btn"><i class="fa fa-envelope "></i> Email</button>{% endif %}
+            <!--Reddit-->
+            {% if media.Reddit %}
+            <button type="button" onclick='window.location = "{{ media.Reddit }}"' style="background-color: #ff4500 !important; color: white; margin: 5px" class="btn"><i class="fa fa-reddit-alien "></i> Reddit</button>{% endif %}
+        </div>
+        {% endfor %}
     </div>
 {% endblock %}

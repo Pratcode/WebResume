@@ -1,15 +1,19 @@
 from django.shortcuts import render
+from .models import Data
+from medapp.models import Media
+
 
 # Create your views here.
 
 
 def home(request):
-    return render(request, 'home.html', {'name':'jubin nautiyal'})
+    data_cards = Data.objects.all()
+    media_suff = Media.objects.all()
+    return render(request, 'home.html', {'data_cards': data_cards, 'media_suff': media_suff})
 
 
-def resume(request):
-    return render(request, 'resume.html', {'name':'jubin'})
 
 
-def contact(request):
-    return render(request, 'contact.html')
+
+
+

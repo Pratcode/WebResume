@@ -35,7 +35,7 @@ and note username - postgres(default), password and port -'5432'(default)
 
 and then download/install pgadmin which is graphical tool to manage database,
 it helps us to create and manage database from GUI.
-
+```bash
 DATABASES = {
     'default': {
       'ENGINE': 'django.db.back ends.PostgreSQL',             -----(which will remain same)
@@ -48,6 +48,7 @@ DATABASES = {
 
      }
 }
+```
 
 
 
@@ -55,13 +56,19 @@ To run product----
 
 
 locate project folder, locat it by cmd-
+```bash
 > cd [project name]
+```
 
 and then to install rest of dependencies for project type- 
+```bash
 > pip install -r requirements.txt
+```
 
 and to start server-
+```bash
 > python manange.py run server
+```
 
 and finally your website is running.
 
@@ -70,8 +77,10 @@ and finally your website is running.
 To start filling details and accessing admin panel----
 
 create super user - 
+```bash
 > python manage.py create superuser
 and create your admin account,
+```
 
 now type /admin in url after url of local host and access login panel
 where u can type ur login credentials.

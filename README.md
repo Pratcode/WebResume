@@ -13,6 +13,8 @@ every data which is represented is comming from database.
 - here i have used sqllite for testing and postgres for production.
 - ones deployed we dont need to edit things manually, all things can be updated from
    admin panel.
+  
+# UI
 
 ![alt text](img/UI.gif) 
 
@@ -113,6 +115,8 @@ because database is owned by u.
 **Sections-** 
 where u can put your all content, by putting title.
 Every discription will be shown in bullet points.
+
+# Admin Section 
 
 ![alt text](img/admin.gif) 
 

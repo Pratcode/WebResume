@@ -14,9 +14,10 @@ every data which is represented is comming from database.
 - ones deployed we dont need to edit things manually, all things can be updated from
    admin panel.
   
-# UI
+# User interface
 
-![alt text](img/UI.gif) 
+![alt text](img/UI.gif)
+
 
 ### How to use
 

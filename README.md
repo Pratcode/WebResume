@@ -1,14 +1,25 @@
--WebResume-
+# WebResume
+  
+WebResume is a non-static website resume, which utilises database and 
+every data which is represented is comming from database.
 
-The WebResume is a website resume platform, which is minimalist in nature,
-means that it doesn't have cluttered design, it has card based modular design,
-where many sections can be created as per need, it is responsive, means that it can be viewed in any kind of screen size,
-here we can also upload resume which can be accessed in one click, and contact section has many ways to contact a person.
+
+## Features
+
+- We can create many sections without editing html, since data will be comming form database. 
+- It is responsive based on bootstarpe.
+- We can also upload resume which can be accessed in one click.
+- Contact page has contact form, and social media handles section, which also connected to database.
+- here i have used sqllite for testing and postgres for production.
+- ones deployed we dont need to edit things manually, all things can be updated from
+   admin panel.
+
+### How to use
 
 Install python in the machine and set environment path, either by ticking on installer or setting up manually.
 Open cmd or powershell.
 
-virtual environment----
+###### virtual environment -
 
 Locate the project and extract it.
 and then if you have other project and don't wanna mess up dependency, install virtual environment-
@@ -26,14 +37,16 @@ then to activate it-
 > activate.bat and ./activate.ps1 for powershell
 ```
 
-Setting up database configuration----
+###### Setting up database configuration -
 
 
-Download PostgreSQL from official website
-and install it.
-and note username - postgres(default), password and port -'5432'(default)
+Download PostgreSQL from official website and install it. <br />
 
-and then download/install pgadmin which is graphical tool to manage database,
+`note - `  <br />
+`username - postgres(default)`  <br />
+`password and port -'5432'(default)`  <br />
+
+Then download/install pgadmin which is graphical tool to manage database,
 it helps us to create and manage database from GUI.
 ```bash
 DATABASES = {
@@ -48,14 +61,12 @@ DATABASES = {
 
      }
 }
-```
+``` 
 
 
+###### To run product -
 
-To run product----
-
-
-locate project folder, locat it by cmd-
+locate project folder, locate it by cmd-
 ```bash
 > cd [project name]
 ```
@@ -70,17 +81,15 @@ and to start server-
 > python manange.py run server
 ```
 
-and finally your website is running.
+**----finally your WebResume is running.----**
 
-
-
-To start filling details and accessing admin panel----
+###### To start filling details and accessing admin panel -
 
 create super user - 
 ```bash
 > python manage.py create superuser
-and create your admin account,
 ```
+and create your admin account,
 
 now type /admin in url after url of local host and access login panel
 where u can type ur login credentials.
@@ -92,8 +101,8 @@ because database is owned by u.
 
 there are there sections in admin panel-
 
-Contacts- where u will see all ur massages.
-Media - where u can put ur -
+messages - where u will see all ur massages.
+Person - where u can put ur -
 
 (1) name (which will be shown in navbar brand and card as well and bottom of page)
 (2) profession (it will be shown highlighted)
@@ -111,15 +120,15 @@ Every discription will be shown in bullet points,
 this section is based on cards where u can create as many cards,
 based on your need, which is shown in your home page.
 
+### Note----
 
-Note----
-
-
-If you are having difficulty in powershell, you can these steps-
+###### If you are having difficulty in powershell, you can these steps- </br>
 run powershell as administrator,
-then type command- set-ExecutionPolicy Unrestricted
+then type command- 
+```bash
+set-ExecutionPolicy Unrestricted
+```
 and then run powershell in normal mode as you were using before.
 
 
-
-----Now finally your details are on website---
+**---- Now finally your details are on WebResume ---**

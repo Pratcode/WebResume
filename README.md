@@ -81,7 +81,7 @@ and to start server-
 > python manange.py run server
 ```
 
-**----finally your WebResume is running.----**
+**---finally WebResume is running.---**
 
 ###### To start filling details and accessing admin panel -
 
@@ -89,36 +89,31 @@ create super user -
 ```bash
 > python manage.py create superuser
 ```
-and create your admin account,
+and create your admin account.
 
-now type /admin in url after url of local host and access login panel
-where u can type ur login credentials.
+Now type `/admin` in url after url of local host and access login panel
+where u can type ur login credentials. finally u have access to admin panal. </br>
+To start seeing everything filled in WebResume u have to put data,
+because database is owned by u.  
 
-and finally u have access to admin panal.
 
-To seeing everything filled in web resume u have to put data,
-because database is owned by u.
+###### there are there sections in admin panel-
 
-there are there sections in admin panel-
+**messages-** where u will see all ur massages. <br />
 
-messages - where u will see all ur massages.
-Person - where u can put ur -
+**Person-** where u can put ur -
+- name (which will be shown in navbar brand and card as well and bottom of page)
+- profession (it will be shown highlighted)
+- other descriptions.
+- image (it is on home page)
+- resume (resume page will directly load resume)
+- your social media links.
+- your email.
 
-(1) name (which will be shown in navbar brand and card as well and bottom of page)
-(2) profession (it will be shown highlighted)
-(3) other description.
-(4) image (it is on home page)
-(5) resume (resume page will directly load resume)
-(6) to (15)and (17) - your social media links.
-(16) here you can put your email.
-Which will directly redirect user to mail client.
-your copyright in buttom of page will load automatically as u put info.
-
-Data-
+**Sections-** 
 where u can put your all content, by putting title.
-Every discription will be shown in bullet points,
-this section is based on cards where u can create as many cards,
-based on your need, which is shown in your home page.
+Every discription will be shown in bullet points.
+
 
 ### Note----
 
@@ -131,4 +126,4 @@ set-ExecutionPolicy Unrestricted
 and then run powershell in normal mode as you were using before.
 
 
-**---- Now finally your details are on WebResume ---**
+**--- Now finally details are on WebResume ---**

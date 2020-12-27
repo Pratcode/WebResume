@@ -4,12 +4,12 @@ from django.db import models
 # Create your models here.
 
 
-class Media(models.Model):
-    media_name = models.CharField(max_length=100)
-    media_pro = models.CharField(max_length=100)
-    media_body = models.TextField(blank=True)
-    media_img = models.ImageField(upload_to='image', default='image.jpg', blank=True)
-    media_file = models.FileField(upload_to='documents', default='resume.pdf', blank=True)
+class Person(models.Model):
+    Person_name = models.CharField(max_length=100)
+    Person_pro = models.CharField(max_length=100)
+    Person_body = models.TextField(blank=True)
+    Person_img = models.ImageField(upload_to='image', default='image.jpg', blank=True)
+    Person_file = models.FileField(upload_to='documents', default='resume.pdf', blank=True)
     facebook = models.URLField(max_length=300, blank=True)
     Twitter = models.URLField(max_length=300, blank=True)
     Google = models.URLField(max_length=300, blank=True)
@@ -24,13 +24,18 @@ class Media(models.Model):
     Reddit = models.URLField(max_length=300, blank=True)
 
     def __str__(self):
-        return self.media_name
+        return self.Person_name
 
 
-class Contact(models.Model):
-    contact_name = models.CharField(max_length=100)
-    contact_email = models.EmailField(max_length=300)
-    contact_body = models.TextField()
+class Section(models.Model):
+    Section_title = models.CharField(max_length=100)
+    Section_body1 = models.TextField()
+    Section_body2 = models.TextField()
+    Section_body3 = models.TextField()
+    Section_body4 = models.TextField()
 
     def __str__(self):
-        return self.contact_name
+        return self.Section_title
+
+
+
